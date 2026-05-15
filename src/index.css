@@ -1,0 +1,13 @@
+@import "tailwindcss";
+
+@theme {
+  --font-body: "Inter", sans-serif;
+  --font-display: "Space Grotesk", sans-serif;
+  --font-mono: "Space Mono", monospace;
+  --font-console: "JetBrains Mono", monospace;
+
+  --color-black-charcoal: #27262d;
+  --color-white: #ffffff;
+  --color-red-crimson: #e63946;
+  --color-gray-silver: #c0c0c0;
+}
