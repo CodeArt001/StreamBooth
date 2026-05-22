@@ -1,23 +1,23 @@
 import { useNavigate } from "react-router-dom";
 import Button from "../BoxModel/Button";
-import Divider from "../Line/Divider";
 import DescriptionText from "../Text/DescriptionText";
 import TitleText from "../Text/TitleText";
 import { IoEyeOffOutline } from "react-icons/io5";
 import { IoEyeOutline } from "react-icons/io5";
 import { useState } from "react";
 
-const SignUp = () => {
+const Login = () => {
   const [showPassword, setShowPassword] = useState(false);
+
   const handleShowPassword = () => {
     setShowPassword(!showPassword);
   };
   const navigate = useNavigate();
-  const handleLogin = () => {
-    navigate("/login");
+  const handleSignUp = () => {
+    navigate("/sign-up");
   };
   return (
-    <div className="w-1/3 mx-auto h-full bg-[#0F0E17] ">
+    <div className="w-1/3 mx-auto h-[90vh] bg-[#0F0E17] flex flex-col justify-center rounded-2xl">
       <div className="px-6 py-4 flex flex-col items-center justify-center">
         <div className="flex gap-4 items-center py-4">
           <TitleText
@@ -30,7 +30,7 @@ const SignUp = () => {
           </div>
         </div>
         <TitleText
-          text="Join The Command Network"
+          text="Welcome Back, Director"
           size="text-[24px]"
           weight="font-bold"
         />
@@ -40,20 +40,6 @@ const SignUp = () => {
         />
 
         <div className="w-[90%]">
-          <div className="py-2">
-            <label
-              htmlFor="full name"
-              className="text-white text-[18px] font-body"
-            >
-              Full name
-            </label>
-            <input
-              type="text"
-              id="full name"
-              placeholder="Enter your name"
-              className="pl-4 border border-gray-400/20 rounded-lg w-full text-white py-4 mt-2"
-            />
-          </div>
           <div className="py-2">
             <label htmlFor="email" className="text-white text-[18px] font-body">
               Email
@@ -74,9 +60,9 @@ const SignUp = () => {
             </label>
             <div className="relative">
               <input
-                type="password"
+                type={showPassword ? "text" : "password"}
                 id="password"
-                placeholder="Create a password"
+                placeholder="Enter password"
                 className="pl-4 border border-gray-400/20 rounded-lg w-full text-white py-4 mt-2"
               />
               <span
@@ -87,23 +73,30 @@ const SignUp = () => {
               </span>
             </div>
           </div>
+          <div className="flex justify-end  cursor-pointer">
+            <Button
+              text="forget password ?"
+              color="text-red-600"
+              bgColor="bg-transparent"
+              paddinglr="px-0"
+              paddindtb="py-2"
+            />
+          </div>
         </div>
         <div className="py-4 w-full flex justify-center items-center">
           <Button
-            text="Sign up"
+            text="Sign in"
             bgColor="bg-white"
             paddindtb="py-4"
             className="w-[90%] "
           />
         </div>
         <div className="flex justify-between items-center">
-          <Divider />
           <DescriptionText text="or" />
-          <Divider />
         </div>
         <div className="py-4 w-full flex justify-center items-center">
           <Button
-            text="Sign up with Google"
+            text="Continue with Google"
             bgColor="bg-white"
             color="text-black"
             paddindtb="py-4"
@@ -112,7 +105,7 @@ const SignUp = () => {
         </div>
         <div className=" w-full flex justify-center items-center py-2">
           <Button
-            text="Sign up with Apple"
+            text="Continue with Apple"
             bgColor="bg-black"
             color="text-white"
             paddindtb="py-4"
@@ -120,24 +113,19 @@ const SignUp = () => {
           />
         </div>
         <div className="flex gap-2 mt-4 items-center">
-          <TitleText text="Already have an account?" size="text-[14px]" />
+          <TitleText text="Don't have an account?" size="text-[14px]" />
           <Button
-            onClick={handleLogin}
-            text="Login"
-            bgColor="bg-transparent"
+            onClick={handleSignUp}
+            text="Sign up"
             color="text-red-600"
             paddinglr="px-0"
+            bgColor="bg-transparent"
             className="cursor-pointer font-body font-semibold"
           />
         </div>
-        <DescriptionText
-          text="By signing up, you agree to our Terms of Service and Privacy Policy."
-          size="text-[12px]"
-          className="py-2"
-        />
       </div>
     </div>
   );
 };
 
-export default SignUp;
+export default Login;

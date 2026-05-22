@@ -14,6 +14,9 @@ const Navbar = ({ children, customClass }: NavbarProps) => {
   const handleSignUp = () => {
     navigate("/sign-up");
   };
+  const handleLogin = () => {
+    navigate("/login");
+  };
   const navLinks = [
     {
       name: "Features",
@@ -65,6 +68,7 @@ const Navbar = ({ children, customClass }: NavbarProps) => {
       </ul>
       <div className="flex items-center gap-6 ">
         <Button
+          onClick={handleLogin}
           text="Login"
           bgColor="bg-black"
           color="text-white"

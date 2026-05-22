@@ -1,3 +1,4 @@
+import Login from "./Components/Auth/Login";
 import SignUp from "./Components/Auth/SignUp";
 import Footer from "./Components/Footer/Footer";
 import Navbar from "./Components/Nav/Navbar";
@@ -16,10 +17,11 @@ function App() {
     <>
       <div className="bg-black min-h-screen flex flex-col">
         {shouldHideNavbar && <Navbar />}
-        <main className="flex-1 flex flex-col">
+        <main className="flex-grow flex items-center justify-center">
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/sign-up" element={<SignUp />} />
+            <Route path="/login" element={<Login />} />
           </Routes>
         </main>
         {shouldHideFooter && <Footer />}
