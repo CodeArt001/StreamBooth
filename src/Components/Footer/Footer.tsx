@@ -85,7 +85,7 @@ const Footer = () => {
         </div>
         <div className="flex items-center justify-between mt-4">
           <TitleText
-            text="© 2024 StreamBooth_CORP // MISSION_CONTROL_V1.0.4-STABLE"
+            text={`© ${new Date().getFullYear()} StreamBooth_CORP // MISSION_CONTROL_V1.0.4-STABLE`}
             size="text-sm"
             color="text-white/60"
             className="font-console"

@@ -10,4 +10,27 @@
   --color-white: #ffffff;
   --color-red-crimson: #e63946;
   --color-gray-silver: #c0c0c0;
+
+  --color-access-red: #ff3b3f;
+  --color-access-bg: #0a0a0a;
+  --color-access-border: #1a1a1a;
+  --color-access-cyan: #00f2ff;
+
+  --color-access-gray: #a1a1aa;
+  --color-access-dark-gray: #4b5563;
+}
+@theme {
+  /* ... your other theme settings */
+
+  --animate-smooth-pulse: smooth-pulse 1.5s ease-in-out infinite;
+
+  @keyframes smooth-pulse {
+    0%,
+    100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.3;
+    }
+  }
 }

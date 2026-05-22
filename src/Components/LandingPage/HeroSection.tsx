@@ -5,7 +5,23 @@ import TitleText from "../Text/TitleText";
 const HeroSection = () => {
   return (
     <>
-      <div className="flex flex-col items-center justify-center px-50 mt-14 ">
+      <div className="flex justify-center mt-10">
+        <div className="inline-block border border-red-500 bg-[#1A0B0B] rounded-full animate-smooth-pulse">
+          <div className="flex gap-3 justify-center items-center px-6 py-1.5">
+            {/* The Sharp Dot */}
+            <div className="h-2.5 w-2.5 rounded-full bg-red-600 shadow-[0_0_10px_#dc2626]" />
+
+            {/* The Text */}
+            <div className="flex gap-2 items-center font-console tracking-widest text-[18px] ">
+              <span className="text-red-500 font-bold">Live</span>
+              <span className="text-red-500/80">
+                The Future of Live Broadcasting
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="flex flex-col items-center justify-center px-50 mt-10 ">
         <div className="flex flex-col items-center justify-center">
           <TitleText
             text="The Internet Is Live"

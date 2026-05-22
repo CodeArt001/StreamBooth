@@ -6,6 +6,7 @@ interface buttonProps {
   borderRadius?: string;
   color?: string;
   weight?: string;
+  paddindtb?: string;
   onClick?: () => void;
 }
 
@@ -17,18 +18,19 @@ const Button = ({
   borderRadius,
   color,
   weight,
+  paddindtb,
   onClick,
 }: buttonProps) => {
   return (
     <>
-      {icon && <div>{icon}</div>}
-      <div
+      <button
         onClick={onClick}
-        className={`${className ? className : ""} ${bgColor ? bgColor : "bg-zinc-800"} ${color ? color : ""} ${weight ? weight : "font-bold"} ${borderRadius ? borderRadius : "rounded-lg"} text-center flex items-center gap-2 cursor-pointer transition-all
-        px-8 py-3 `}
+        className={`${className ? className : ""} ${bgColor ? bgColor : "bg-zinc-800"} ${color ? color : ""} ${weight ? weight : "font-bold"} ${borderRadius ? borderRadius : "rounded-lg"} ${paddindtb ? paddindtb : " py-3"} px-8 text-center flex items-center justify-center gap-2 cursor-pointer transition-all`}
       >
-        {text}
-      </div>
+        {icon && <div>{icon}</div>}
+
+        {text && <div className="text-center">{text}</div>}
+      </button>
     </>
   );
 };

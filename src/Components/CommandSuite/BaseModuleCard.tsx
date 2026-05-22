@@ -13,7 +13,7 @@ export const BaseModuleCard: React.FC<BaseModuleCardProps> = ({
   children,
 }) => {
   return (
-    <div className="w-full bg-[#161628] border border-[#1a1a2e] rounded-sm p-6 relative flex flex-col justify-between overflow-hidden group hover:border-[#7B61FF]/30 hover:bg-[#111124]/60 transition-all duration-300 min-h-[500px]">
+    <div className="w-full bg-[#0F0E17] border border-[#1a1a2e] rounded-sm p-6 relative flex flex-col justify-between overflow-hidden group hover:border-[#7B61FF]/30 hover:bg-[#111124]/60 transition-all duration-300 min-h-[500px]">
       <img
         src={border}
         alt="border-img"
