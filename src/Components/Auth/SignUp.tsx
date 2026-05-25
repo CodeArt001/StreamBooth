@@ -17,7 +17,7 @@ const SignUp = () => {
     navigate("/login");
   };
   return (
-    <div className="w-1/3 mx-auto h-full bg-[#0F0E17] ">
+    <div className="w-1/3 mx-auto h-full bg-[#0F0E17] rounded-2xl">
       <div className="px-6 py-4 flex flex-col items-center justify-center">
         <div className="flex gap-4 items-center py-4">
           <TitleText
