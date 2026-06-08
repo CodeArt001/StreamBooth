@@ -23,16 +23,13 @@ const Navbar = ({ children, customClass }: NavbarProps) => {
       href: "#features",
     },
     {
-      name: "How It Works",
-      href: "#how-it-works",
+      name: "Who Its For",
+      href: "#who-its-for",
     },
+
     {
       name: "Pricing",
       href: "#pricing",
-    },
-    {
-      name: "Contact",
-      href: "#contact",
     },
   ];
   return (

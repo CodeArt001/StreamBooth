@@ -2,18 +2,22 @@ import border from "../../assets/images/Border.png";
 import border2 from "../../assets/images/Border2.png";
 
 interface BaseModuleCardProps {
-  icon: React.ReactNode;
-  tagCode: string;
+  icon?: React.ReactNode;
+  tagCode?: string;
   children: React.ReactNode;
+  className?: string;
 }
 
 export const BaseModuleCard: React.FC<BaseModuleCardProps> = ({
   icon,
   tagCode,
   children,
+  className = "",
 }) => {
   return (
-    <div className="w-full bg-[#0F0E17] border border-[#1a1a2e] rounded-sm p-6 relative flex flex-col justify-between overflow-hidden group hover:border-[#7B61FF]/30 hover:bg-[#111124]/60 transition-all duration-300 min-h-[500px]">
+    <div
+      className={`w-full bg-[#0F0E17] border border-[#1a1a2e] rounded-sm p-6 relative flex flex-col justify-between overflow-hidden group hover:border-[#7B61FF]/30 hover:bg-[#111124]/60 transition-all duration-300 min-h-[500px] ${className}`}
+    >
       <img
         src={border}
         alt="border-img"

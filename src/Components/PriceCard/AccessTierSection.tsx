@@ -19,7 +19,7 @@ const AccessTierSection = ({
   return (
     <div>
       <>
-        <div className="flex flex-col items-center text-center py-12">
+        <div className="flex flex-col items-center text-center ">
           {/* Main Title - Space Grotesk */}
           <h2 className="font-display text-2xl md:text-4xl font-medium tracking-[0.2em] text-white uppercase mb-2">
             Choose Your Access Tier
@@ -29,7 +29,7 @@ const AccessTierSection = ({
           </p>
         </div>
 
-        <div className=" mx-auto px-[10rem] pt-2 pb-34">
+        <div className=" mx-auto px-[10rem] pt-2 pb-18">
           {/* 1. Grid Container (The Parent) */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {/* Card 01 */}

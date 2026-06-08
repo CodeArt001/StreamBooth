@@ -1,7 +1,9 @@
 import Login from "./Components/Auth/Login";
 import SignUp from "./Components/Auth/SignUp";
 import Footer from "./Components/Footer/Footer";
+import HowItWorks from "./Components/HowItWorks/HowItWorks";
 import Navbar from "./Components/Nav/Navbar";
+import Pricing from "./Components/Pricing/Pricing";
 import HomePage from "./Screen/HomePage";
 import { Route, Routes, useLocation } from "react-router-dom";
 
@@ -22,6 +24,8 @@ function App() {
             <Route path="/" element={<HomePage />} />
             <Route path="/sign-up" element={<SignUp />} />
             <Route path="/login" element={<Login />} />
+            <Route path="/how-it-works" element={<HowItWorks />} />
+            <Route path="/pricing" element={<Pricing />} />
           </Routes>
         </main>
         {shouldHideFooter && <Footer />}
